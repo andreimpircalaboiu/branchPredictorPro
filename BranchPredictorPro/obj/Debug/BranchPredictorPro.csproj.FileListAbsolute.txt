@@ -1,0 +1,12 @@
+c:\users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\bin\Debug\BranchPredictorPro.exe.config
+C:\Users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\bin\Debug\BranchPredictorPro.exe
+C:\Users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\bin\Debug\BranchPredictorPro.pdb
+C:\Users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\obj\Debug\BranchPredictorPro.csprojResolveAssemblyReference.cache
+C:\Users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\obj\Debug\BranchPredictorPro.Presentation.MainForm.resources
+C:\Users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\obj\Debug\BranchPredictorPro.Properties.Resources.resources
+C:\Users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\obj\Debug\BranchPredictorPro.csproj.GenerateResource.Cache
+C:\Users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\obj\Debug\BranchPredictorPro.exe
+C:\Users\andrei.pircalaboiu\documents\visual studio 2015\Projects\BranchPredictorPro\BranchPredictorPro\obj\Debug\BranchPredictorPro.pdb
+D:\Repositories\BranchPredictorPro\BranchPredictorPro\bin\Debug\BranchPredictorPro.exe.config
+D:\Repositories\BranchPredictorPro\BranchPredictorPro\obj\Debug\BranchPredictorPro.exe
+D:\Repositories\BranchPredictorPro\BranchPredictorPro\obj\Debug\BranchPredictorPro.pdb
