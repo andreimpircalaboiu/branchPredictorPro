@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using BranchPredictorPro.Application.Interfaces;
 
 namespace BranchPredictorPro.Application
 {
@@ -12,38 +13,20 @@ namespace BranchPredictorPro.Application
     {
         private Thread _engineThread;
         private bool _done;
+        private readonly IDetectorFactory _detectorFactory;
+        public ResultModel Result { get; set; }
 
         public DetectionEngine(InitModel initModel)
         {
             _engineThread = new Thread(() => StartDetection(initModel));
+            _detectorFactory = new DetectorFactory();
         }
 
         private void StartDetection(InitModel initModel)
         {
-            switch(initModel.DetectionType)
-            {
-                case DetectionType.None:
-                    break;
-                case DetectionType.Global:
-                    break;
-                case DetectionType.Local:
-                    break;
-                case DetectionType.Path:
-                    break;
-                case DetectionType.GlobalLocal:
-                {
-                    
-                }
-                    break;
-                case DetectionType.GlobalPath:
-                    break;
-                case DetectionType.LocalPath:
-                    break;
-                case DetectionType.GlobalLocalPath:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+            var detector = _detectorFactory.Generate(initModel.DetectionType);
+            if (detector == null) return;
+            Result = detector.RunDetector(initModel);
         }
     }
 }

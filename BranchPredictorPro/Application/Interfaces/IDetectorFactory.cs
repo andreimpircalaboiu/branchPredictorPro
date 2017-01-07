@@ -7,9 +7,8 @@ using BranchPredictorPro.Models;
 
 namespace BranchPredictorPro.Application.Interfaces
 {
-    public interface IDetector
+    public interface IDetectorFactory
     {
-        void InitTable();
-        ResultModel RunDetector(InitModel initModel);
+        IDetector Generate(DetectionType type);
     }
 }

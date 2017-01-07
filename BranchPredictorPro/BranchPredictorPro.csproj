@@ -48,15 +48,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\DetectionEngine.cs" />
+    <Compile Include="Application\DetectorFactory.cs" />
+    <Compile Include="Application\Detectors\GenericDetector.cs" />
+    <Compile Include="Application\Detectors\GlobalDetector.cs" />
+    <Compile Include="Application\Detectors\GlobalLocalDetector.cs" />
     <Compile Include="Application\Interfaces\IDetector.cs" />
+    <Compile Include="Application\Interfaces\IDetectorFactory.cs" />
+    <Compile Include="Application\Interfaces\ITable.cs" />
+    <Compile Include="Application\Rows\GlobalHistoryTableRow.cs" />
+    <Compile Include="Application\Tables\GlobalHistoryTable.cs" />
     <Compile Include="Constants\ArchitectureType.cs" />
     <Compile Include="Constants\BrType.cs" />
     <Compile Include="Helpers\FormHelper.cs" />
     <Compile Include="Import\TraceParser.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\DetectionType.cs" />
+    <Compile Include="Models\DetectorModel.cs" />
     <Compile Include="Models\InitModel.cs" />
-    <Compile Include="Models\ResultGenerator.cs" />
+    <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\TraceEntry.cs" />
     <Compile Include="Presentation\MainForm.cs">
       <SubType>Form</SubType>

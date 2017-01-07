@@ -6,25 +6,23 @@ using System.Threading.Tasks;
 
 namespace BranchPredictorPro.Models
 {
-    class ResultGenerator
+    public class ResultModel
     {
         public string TraceName { get; set;}
         public string TypeName { get; set; }
-        public int Hrl { get; set; }
-        public int Hrg { get; set; }
-        public int Path { get; set; }
+        public int GlobalHistoryBits { get; set; }
+        public int LocalHistoryBits { get; set; }
+        public int PathBits { get; set; }
         public double UnbiasedPolarization { get; set; }
         public string UnbiasedContext { get; }
 
-  
-
-        public string print() {
+        public string Print() {
 
             return "Trace:                 " + TraceName + "\n" +
                    "Type:                  " + TypeName + "\n" +
-                   "Hrl:                   " + Hrl + "\n" +
-                   "Hrg:                   " + Hrg + "\n" +
-                   "Path:                  " + Path + "\n" +
+                   "Hrl:                   " + LocalHistoryBits + "\n" +
+                   "Hrg:                   " + GlobalHistoryBits + "\n" +
+                   "Path:                  " + PathBits + "\n" +
                    "Unbiased Polarization: " + UnbiasedPolarization + "\n" +
                    "Unbiased Context:      " + UnbiasedContext + "\n";
 
