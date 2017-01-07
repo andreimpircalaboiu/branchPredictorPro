@@ -38,5 +38,6 @@ namespace BranchPredictorPro.Models
         public int PathBits { get; set; }
         public double UnbiasesPolarization { get; set; }
         public DetectionType DetectionType { get; set; }
+        public string TraceName { get; set; }
     }
 }

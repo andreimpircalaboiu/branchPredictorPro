@@ -50,10 +50,16 @@
             this.UnbiasedUpDown = new System.Windows.Forms.NumericUpDown();
             this.DetectionTypeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.HrlValidationMessage = new System.Windows.Forms.Label();
+            this.HrGValidationMessage = new System.Windows.Forms.Label();
+            this.PathValidationMessage = new System.Windows.Forms.Label();
+            this.TraceValidationMessage = new System.Windows.Forms.Label();
+            this.powerOfTwoUpDown1 = new BranchPredictorPro.Helpers.PowerOfTwoUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.LocalHistoryUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GlobalHistoryUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PathUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnbiasedUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerOfTwoUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // BranchPredictor
@@ -154,6 +160,7 @@
             this.RunButton.TabIndex = 15;
             this.RunButton.Text = "Run";
             this.RunButton.UseVisualStyleBackColor = true;
+            this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
             // 
             // OutputText
             // 
@@ -225,7 +232,7 @@
             // 
             // UnbiasedUpDown
             // 
-            this.UnbiasedUpDown.Enabled = false;
+            this.UnbiasedUpDown.DecimalPlaces = 2;
             this.UnbiasedUpDown.Location = new System.Drawing.Point(139, 137);
             this.UnbiasedUpDown.Maximum = new decimal(new int[] {
             1,
@@ -254,11 +261,70 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Detector Type:";
             // 
+            // HrlValidationMessage
+            // 
+            this.HrlValidationMessage.AutoSize = true;
+            this.HrlValidationMessage.Location = new System.Drawing.Point(359, 71);
+            this.HrlValidationMessage.Name = "HrlValidationMessage";
+            this.HrlValidationMessage.Size = new System.Drawing.Size(0, 13);
+            this.HrlValidationMessage.TabIndex = 31;
+            // 
+            // HrGValidationMessage
+            // 
+            this.HrGValidationMessage.AutoSize = true;
+            this.HrGValidationMessage.Location = new System.Drawing.Point(359, 94);
+            this.HrGValidationMessage.Name = "HrGValidationMessage";
+            this.HrGValidationMessage.Size = new System.Drawing.Size(0, 13);
+            this.HrGValidationMessage.TabIndex = 32;
+            // 
+            // PathValidationMessage
+            // 
+            this.PathValidationMessage.AutoSize = true;
+            this.PathValidationMessage.Location = new System.Drawing.Point(359, 117);
+            this.PathValidationMessage.Name = "PathValidationMessage";
+            this.PathValidationMessage.Size = new System.Drawing.Size(0, 13);
+            this.PathValidationMessage.TabIndex = 33;
+            // 
+            // TraceValidationMessage
+            // 
+            this.TraceValidationMessage.AutoSize = true;
+            this.TraceValidationMessage.Location = new System.Drawing.Point(514, 16);
+            this.TraceValidationMessage.Name = "TraceValidationMessage";
+            this.TraceValidationMessage.Size = new System.Drawing.Size(0, 13);
+            this.TraceValidationMessage.TabIndex = 34;
+            // 
+            // powerOfTwoUpDown1
+            // 
+            this.powerOfTwoUpDown1.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.powerOfTwoUpDown1.Location = new System.Drawing.Point(517, 110);
+            this.powerOfTwoUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.powerOfTwoUpDown1.Name = "powerOfTwoUpDown1";
+            this.powerOfTwoUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.powerOfTwoUpDown1.TabIndex = 35;
+            this.powerOfTwoUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 504);
+            this.Controls.Add(this.powerOfTwoUpDown1);
+            this.Controls.Add(this.TraceValidationMessage);
+            this.Controls.Add(this.PathValidationMessage);
+            this.Controls.Add(this.HrGValidationMessage);
+            this.Controls.Add(this.HrlValidationMessage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DetectionTypeLabel);
             this.Controls.Add(this.UnbiasedUpDown);
@@ -286,6 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GlobalHistoryUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PathUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UnbiasedUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.powerOfTwoUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,6 +382,11 @@
         private System.Windows.Forms.NumericUpDown UnbiasedUpDown;
         private System.Windows.Forms.Label DetectionTypeLabel;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label HrlValidationMessage;
+        private System.Windows.Forms.Label HrGValidationMessage;
+        private System.Windows.Forms.Label PathValidationMessage;
+        private System.Windows.Forms.Label TraceValidationMessage;
+        private Helpers.PowerOfTwoUpDown powerOfTwoUpDown1;
     }
 }
 

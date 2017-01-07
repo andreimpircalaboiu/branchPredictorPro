@@ -15,7 +15,6 @@ C:\Users\Radu2T\Documents\branchpredictorpro\BranchPredictorPro\obj\Debug\Branch
 C:\Users\Radu2T\Documents\branchpredictorpro\BranchPredictorPro\obj\Debug\BranchPredictorPro.pdb
 C:\Users\Radu2T\Documents\branchpredictorpro\BranchPredictorPro\bin\Debug\BranchPredictorPro.exe
 C:\Users\Radu2T\Documents\branchpredictorpro\BranchPredictorPro\bin\Debug\BranchPredictorPro.pdb
-C:\Users\Radu2T\Documents\branchpredictorpro\BranchPredictorPro\obj\Debug\BranchPredictorPro.csprojResolveAssemblyReference.cache
 C:\Users\Radu2T\Documents\branchpredictorpro\BranchPredictorPro\obj\Debug\BranchPredictorPro.Presentation.MainForm.resources
 C:\Users\Radu2T\Documents\branchpredictorpro\BranchPredictorPro\obj\Debug\BranchPredictorPro.Properties.Resources.resources
 C:\Users\Radu2T\Documents\branchpredictorpro\BranchPredictorPro\obj\Debug\BranchPredictorPro.csproj.GenerateResource.Cache

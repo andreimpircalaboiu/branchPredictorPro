@@ -26,13 +26,6 @@ namespace BranchPredictorPro.Models
                    "Unbiased Polarization: " + UnbiasedPolarization + "\n" +
                    "Unbiased Context:      " + UnbiasedContext + "\n";
 
-
-
-
-
-
         }
-
-
     }
 }

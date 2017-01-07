@@ -33,6 +33,7 @@ namespace BranchPredictorPro.Presentation
 
         private void ImportButton_Click(object sender, EventArgs e)
         {
+            TraceValidationMessage.Text = "";
             try
             {
                 if (ImportFileDialog.ShowDialog(this) != DialogResult.OK) return;
@@ -60,6 +61,7 @@ namespace BranchPredictorPro.Presentation
                 var traceParser = new TraceParser(lines);
                 InitModel.TraceEntries = traceParser.TraceEntries;
                 TraceFileTextbox.Text = ImportFileDialog.FileName;
+                InitModel.TraceName = TraceFileTextbox.Text;
 
             }
             catch (IOException)
@@ -127,22 +129,60 @@ namespace BranchPredictorPro.Presentation
 
         private void LocalHistoryUpDown_ValueChanged(object sender, EventArgs e)
         {
+
+            HrlValidationMessage.Text = "";
             InitModel.LocalHistoryBits = (int)LocalHistoryUpDown.Value;
         }
 
         private void GlobalHistoryUpDown_ValueChanged(object sender, EventArgs e)
         {
+            HrGValidationMessage.Text = "";
             InitModel.GlobalHistoryBits = (int)GlobalHistoryUpDown.Value;
         }
 
         private void PathUpDown_ValueChanged(object sender, EventArgs e)
         {
+            PathValidationMessage.Text = "";
             InitModel.PathBits = (int)PathUpDown.Value;
         }
 
         private void UnbiasedUpDown_ValueChanged(object sender, EventArgs e)
         {
             InitModel.UnbiasesPolarization = (double)UnbiasedUpDown.Value;
+        }
+
+        private void RunButton_Click(object sender, EventArgs e)
+        {
+            if (InitModel.TraceEntries.Count==0)
+            {
+                TraceValidationMessage.Text = "Import Traces!";
+            }
+
+
+            if (LocalHistoryUpDown.Enabled || GlobalHistoryUpDown.Enabled || PathUpDown.Enabled)
+            {
+                if (LocalHistoryUpDown.Enabled && LocalHistoryUpDown.Value == 0)
+                {
+                    HrlValidationMessage.Text = "Local History must be bigger then 0!";
+                }
+
+                if (GlobalHistoryUpDown.Enabled && GlobalHistoryUpDown.Value == 0)
+                {
+                    HrGValidationMessage.Text = "Global History must be bigger then 0!";
+                }
+
+                if (PathUpDown.Enabled && PathUpDown.Value == 0)
+                {
+                    PathValidationMessage.Text = "Path must be bigger then 0!";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select at least one type of prediction!");
+            }
+           
+
+
         }
     }
 }
