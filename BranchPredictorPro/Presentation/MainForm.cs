@@ -17,6 +17,11 @@ namespace BranchPredictorPro.Presentation
         {
             InitializeComponent();
             InitModel = new InitModel();
+            GlobalHistoryUpDown.Value = 8;
+            LocalHistoryUpDown.Value = 8;
+            PathUpDown.Value = 0;
+            UnbiasedUpDown.Value = 0.95M;
+            EnableDisableGlobalHistory.Checked = true;
             InitBindings();
         }
 
@@ -75,89 +80,69 @@ namespace BranchPredictorPro.Presentation
             }
         }
 
-        private void DirectMappingRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            InitModel.ArchitectureType = ArchitectureType.DirectMapping;
-        }
-
-        private void CompleteAssociativeRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            InitModel.ArchitectureType = ArchitectureType.CompleteAssociative;
-        }
-
         private void EnableDisableLocalHistory_CheckedChanged(object sender, EventArgs e)
         {
             if (EnableDisableLocalHistory.Checked)
             {
+                InitModel.DetectionType = InitModel.DetectionType + 2;
                 LocalHistoryUpDown.Enabled = true;
             }
             else
             {
+                InitModel.DetectionType = InitModel.DetectionType - 2;
                 LocalHistoryUpDown.Enabled = false;
             }
+            DetectionTypeLabel.Text = InitModel.DetectionType.ToString();
         }
 
         private void EnableDisableGlobalHistory_CheckedChanged(object sender, EventArgs e)
         {
             if (EnableDisableGlobalHistory.Checked)
             {
+                InitModel.DetectionType = InitModel.DetectionType + 1;
                 GlobalHistoryUpDown.Enabled = true;
             }
             else
             {
+                InitModel.DetectionType = InitModel.DetectionType - 1;
                 GlobalHistoryUpDown.Enabled = false;
             }
+            DetectionTypeLabel.Text = InitModel.DetectionType.ToString();
         }
 
         private void EnableDisablePath_CheckedChanged(object sender, EventArgs e)
         {
             if (EnableDisablePath.Checked)
             {
+                InitModel.DetectionType = InitModel.DetectionType + 4;
                 PathUpDown.Enabled = true;
             }
             else
             {
+                InitModel.DetectionType = InitModel.DetectionType - 4;
                 PathUpDown.Enabled = false;
             }
-        }
-
-        private void EnableDisableUnbiasedPol_CheckedChanged(object sender, EventArgs e)
-        {
-            if (EnableDisableUnbiasedPol.Checked)
-            {
-                UnbiasedUpDown.Enabled = true;
-            }
-            else
-            {
-                UnbiasedUpDown.Enabled = false;
-            }
+            DetectionTypeLabel.Text = InitModel.DetectionType.ToString();
         }
 
         private void LocalHistoryUpDown_ValueChanged(object sender, EventArgs e)
         {
-            InitModel.LocalHistory = (int)LocalHistoryUpDown.Value;
+            InitModel.LocalHistoryBits = (int)LocalHistoryUpDown.Value;
         }
 
         private void GlobalHistoryUpDown_ValueChanged(object sender, EventArgs e)
         {
-            InitModel.GlobalHistory = (int)GlobalHistoryUpDown.Value;
+            InitModel.GlobalHistoryBits = (int)GlobalHistoryUpDown.Value;
         }
 
         private void PathUpDown_ValueChanged(object sender, EventArgs e)
         {
-            InitModel.Path = (int)PathUpDown.Value;
+            InitModel.PathBits = (int)PathUpDown.Value;
         }
 
         private void UnbiasedUpDown_ValueChanged(object sender, EventArgs e)
         {
-            if (UnbiasedUpDown.Value==0)
-            {
-                InitModel.UnbiasesPolarization = true;
-            }
-            else
-            {
-                InitModel.UnbiasesPolarization = false;
-            }
+            InitModel.UnbiasesPolarization = (double)UnbiasedUpDown.Value;
         }
     }
 }

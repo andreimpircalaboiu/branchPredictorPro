@@ -14,14 +14,9 @@ namespace BranchPredictorPro.Models
             TraceEntries = new List<TraceEntry>();
         }
 
-        private int _cacheEntriesCount;
-        public int CacheEntriesCount
-        {
-            get { return _cacheEntriesCount; }
-            set { SetField(ref _cacheEntriesCount, value); }
-        }
-
         private IList<TraceEntry> _traceEntries;
+        private int _tracesCount;
+
         public IList<TraceEntry> TraceEntries
         {
             get { return _traceEntries; }
@@ -31,19 +26,17 @@ namespace BranchPredictorPro.Models
                 TracesCount = _traceEntries.Count;
             }
         }
-        public ArchitectureType ArchitectureType { get; set; }
-        public int BitsNumber { get; set; }
 
-        private int _tracesCount;
         public int TracesCount
         {
             get { return _tracesCount; }
             set { SetField(ref _tracesCount, value); }
         }
 
-        public int LocalHistory { get; set; }
-        public int GlobalHistory { get; set; }
-        public int Path { get; set; }
-        public bool UnbiasesPolarization { get; set; }
+        public int LocalHistoryBits { get; set; }
+        public int GlobalHistoryBits { get; set; }
+        public int PathBits { get; set; }
+        public double UnbiasesPolarization { get; set; }
+        public DetectionType DetectionType { get; set; }
     }
 }
