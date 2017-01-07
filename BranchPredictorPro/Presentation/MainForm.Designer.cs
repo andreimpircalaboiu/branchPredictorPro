@@ -44,11 +44,12 @@
             this.EnableDisableLocalHistory = new System.Windows.Forms.CheckBox();
             this.EnableDisableGlobalHistory = new System.Windows.Forms.CheckBox();
             this.EnableDisablePath = new System.Windows.Forms.CheckBox();
-            this.EnableDisableUnbiasedPol = new System.Windows.Forms.CheckBox();
             this.LocalHistoryUpDown = new System.Windows.Forms.NumericUpDown();
             this.GlobalHistoryUpDown = new System.Windows.Forms.NumericUpDown();
             this.PathUpDown = new System.Windows.Forms.NumericUpDown();
             this.UnbiasedUpDown = new System.Windows.Forms.NumericUpDown();
+            this.DetectionTypeLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.LocalHistoryUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GlobalHistoryUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PathUpDown)).BeginInit();
@@ -77,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(11, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 5;
@@ -86,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 42);
+            this.label4.Location = new System.Drawing.Point(11, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 9;
@@ -103,7 +104,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 75);
+            this.label5.Location = new System.Drawing.Point(11, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 10;
@@ -112,7 +113,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 98);
+            this.label6.Location = new System.Drawing.Point(11, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 11;
@@ -121,7 +122,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 121);
+            this.label7.Location = new System.Drawing.Point(12, 117);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 12;
@@ -130,7 +131,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 144);
+            this.label8.Location = new System.Drawing.Point(12, 139);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(111, 13);
             this.label8.TabIndex = 13;
@@ -147,19 +148,22 @@
             // 
             // RunButton
             // 
-            this.RunButton.Location = new System.Drawing.Point(15, 174);
+            this.RunButton.Location = new System.Drawing.Point(12, 164);
             this.RunButton.Name = "RunButton";
-            this.RunButton.Size = new System.Drawing.Size(75, 23);
+            this.RunButton.Size = new System.Drawing.Size(340, 23);
             this.RunButton.TabIndex = 15;
             this.RunButton.Text = "Run";
             this.RunButton.UseVisualStyleBackColor = true;
             // 
             // OutputText
             // 
-            this.OutputText.Location = new System.Drawing.Point(15, 216);
+            this.OutputText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OutputText.Location = new System.Drawing.Point(15, 217);
             this.OutputText.Multiline = true;
             this.OutputText.Name = "OutputText";
-            this.OutputText.Size = new System.Drawing.Size(483, 100);
+            this.OutputText.Size = new System.Drawing.Size(735, 279);
             this.OutputText.TabIndex = 16;
             // 
             // EnableDisableLocalHistory
@@ -191,16 +195,6 @@
             this.EnableDisablePath.TabIndex = 21;
             this.EnableDisablePath.UseVisualStyleBackColor = true;
             this.EnableDisablePath.CheckedChanged += new System.EventHandler(this.EnableDisablePath_CheckedChanged);
-            // 
-            // EnableDisableUnbiasedPol
-            // 
-            this.EnableDisableUnbiasedPol.AutoSize = true;
-            this.EnableDisableUnbiasedPol.Location = new System.Drawing.Point(336, 142);
-            this.EnableDisableUnbiasedPol.Name = "EnableDisableUnbiasedPol";
-            this.EnableDisableUnbiasedPol.Size = new System.Drawing.Size(15, 14);
-            this.EnableDisableUnbiasedPol.TabIndex = 23;
-            this.EnableDisableUnbiasedPol.UseVisualStyleBackColor = true;
-            this.EnableDisableUnbiasedPol.CheckedChanged += new System.EventHandler(this.EnableDisableUnbiasedPol_CheckedChanged);
             // 
             // LocalHistoryUpDown
             // 
@@ -243,16 +237,34 @@
             this.UnbiasedUpDown.TabIndex = 28;
             this.UnbiasedUpDown.ValueChanged += new System.EventHandler(this.UnbiasedUpDown_ValueChanged);
             // 
+            // DetectionTypeLabel
+            // 
+            this.DetectionTypeLabel.AutoSize = true;
+            this.DetectionTypeLabel.Location = new System.Drawing.Point(442, 169);
+            this.DetectionTypeLabel.Name = "DetectionTypeLabel";
+            this.DetectionTypeLabel.Size = new System.Drawing.Size(0, 13);
+            this.DetectionTypeLabel.TabIndex = 29;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(358, 169);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Detector Type:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 328);
+            this.ClientSize = new System.Drawing.Size(762, 504);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.DetectionTypeLabel);
             this.Controls.Add(this.UnbiasedUpDown);
             this.Controls.Add(this.PathUpDown);
             this.Controls.Add(this.GlobalHistoryUpDown);
             this.Controls.Add(this.LocalHistoryUpDown);
-            this.Controls.Add(this.EnableDisableUnbiasedPol);
             this.Controls.Add(this.EnableDisablePath);
             this.Controls.Add(this.EnableDisableGlobalHistory);
             this.Controls.Add(this.EnableDisableLocalHistory);
@@ -297,11 +309,12 @@
         private System.Windows.Forms.CheckBox EnableDisableLocalHistory;
         private System.Windows.Forms.CheckBox EnableDisableGlobalHistory;
         private System.Windows.Forms.CheckBox EnableDisablePath;
-        private System.Windows.Forms.CheckBox EnableDisableUnbiasedPol;
         private System.Windows.Forms.NumericUpDown LocalHistoryUpDown;
         private System.Windows.Forms.NumericUpDown GlobalHistoryUpDown;
         private System.Windows.Forms.NumericUpDown PathUpDown;
         private System.Windows.Forms.NumericUpDown UnbiasedUpDown;
+        private System.Windows.Forms.Label DetectionTypeLabel;
+        private System.Windows.Forms.Label label2;
     }
 }
 
