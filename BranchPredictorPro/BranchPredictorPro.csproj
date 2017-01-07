@@ -50,11 +50,14 @@
     <Compile Include="Constants\ArchitectureType.cs" />
     <Compile Include="Constants\BrType.cs" />
     <Compile Include="Helpers\FormHelper.cs" />
+    <Compile Include="Helpers\PowerOfTwoUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Import\TraceParser.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\DetectionType.cs" />
     <Compile Include="Models\InitModel.cs" />
-    <Compile Include="Models\ResultGenerator.cs" />
+    <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\TraceEntry.cs" />
     <Compile Include="Presentation\MainForm.cs">
       <SubType>Form</SubType>

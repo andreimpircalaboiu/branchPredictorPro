@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BranchPredictorPro.Models
 {
-    class ResultGenerator
+    class ResultModel
     {
         public string TraceName { get; set;}
         public string TypeName { get; set; }
@@ -27,11 +27,6 @@ namespace BranchPredictorPro.Models
                    "Path:                  " + Path + "\n" +
                    "Unbiased Polarization: " + UnbiasedPolarization + "\n" +
                    "Unbiased Context:      " + UnbiasedContext + "\n";
-
-
-
-
-
 
         }
 
