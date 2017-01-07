@@ -22,7 +22,7 @@ namespace BranchPredictorPro.Presentation
 
         private void InitBindings()
         {
-            FormHelper.BindControlOnPropertyChanged(CacheEntriesCountTextbox, "Text", InitModel, "CacheEntriesCount");
+            
             FormHelper.BindControlOnPropertyChanged(TraceEntriesCountTextbox, "Text", InitModel, "TracesCount");
         }
 
@@ -83,6 +83,81 @@ namespace BranchPredictorPro.Presentation
         private void CompleteAssociativeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             InitModel.ArchitectureType = ArchitectureType.CompleteAssociative;
+        }
+
+        private void EnableDisableLocalHistory_CheckedChanged(object sender, EventArgs e)
+        {
+            if (EnableDisableLocalHistory.Checked)
+            {
+                LocalHistoryUpDown.Enabled = true;
+            }
+            else
+            {
+                LocalHistoryUpDown.Enabled = false;
+            }
+        }
+
+        private void EnableDisableGlobalHistory_CheckedChanged(object sender, EventArgs e)
+        {
+            if (EnableDisableGlobalHistory.Checked)
+            {
+                GlobalHistoryUpDown.Enabled = true;
+            }
+            else
+            {
+                GlobalHistoryUpDown.Enabled = false;
+            }
+        }
+
+        private void EnableDisablePath_CheckedChanged(object sender, EventArgs e)
+        {
+            if (EnableDisablePath.Checked)
+            {
+                PathUpDown.Enabled = true;
+            }
+            else
+            {
+                PathUpDown.Enabled = false;
+            }
+        }
+
+        private void EnableDisableUnbiasedPol_CheckedChanged(object sender, EventArgs e)
+        {
+            if (EnableDisableUnbiasedPol.Checked)
+            {
+                UnbiasedUpDown.Enabled = true;
+            }
+            else
+            {
+                UnbiasedUpDown.Enabled = false;
+            }
+        }
+
+        private void LocalHistoryUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            InitModel.LocalHistory = (int)LocalHistoryUpDown.Value;
+        }
+
+        private void GlobalHistoryUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            InitModel.GlobalHistory = (int)GlobalHistoryUpDown.Value;
+        }
+
+        private void PathUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            InitModel.Path = (int)PathUpDown.Value;
+        }
+
+        private void UnbiasedUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (UnbiasedUpDown.Value==0)
+            {
+                InitModel.UnbiasesPolarization = true;
+            }
+            else
+            {
+                InitModel.UnbiasesPolarization = false;
+            }
         }
     }
 }

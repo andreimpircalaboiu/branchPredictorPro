@@ -40,5 +40,10 @@ namespace BranchPredictorPro.Models
             get { return _tracesCount; }
             set { SetField(ref _tracesCount, value); }
         }
+
+        public int LocalHistory { get; set; }
+        public int GlobalHistory { get; set; }
+        public int Path { get; set; }
+        public bool UnbiasesPolarization { get; set; }
     }
 }
