@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BranchPredictorPro.Application.Interfaces;
-using BranchPredictorPro.Application.Tables;
+﻿using System.Globalization;
+using BranchPredictorPro.App.Interfaces;
+using BranchPredictorPro.App.Tables;
 using BranchPredictorPro.Models;
 
-namespace BranchPredictorPro.Application.Detectors
+namespace BranchPredictorPro.App.Detectors
 {
     public class GlobalDetector : GenericDetector, IDetector
     {
@@ -21,6 +17,7 @@ namespace BranchPredictorPro.Application.Detectors
             InitDetectorModels(initModel);
             InitTable();
             AddRowsToTable(initModel);
+            ResultModel.UnbiasedContext = Table.GetUnbiasedRatio().ToString(CultureInfo.InvariantCulture);
             return ResultModel;
         }
 

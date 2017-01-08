@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BranchPredictorPro.Application.Interfaces;
+﻿using BranchPredictorPro.App.Interfaces;
 using BranchPredictorPro.Models;
 
-namespace BranchPredictorPro.Application.Detectors
+namespace BranchPredictorPro.App.Detectors
 {
     public class GenericDetector
     {
@@ -22,7 +17,8 @@ namespace BranchPredictorPro.Application.Detectors
                               LocalHistoryBits = initModel.LocalHistoryBits,
                               PathBits = initModel.PathBits,
                               UnbiasedPolarization = initModel.UnbiasesPolarization,
-                              TraceName = initModel.TraceName
+                              TraceName = initModel.TraceName,
+                              TypeName = initModel.DetectionType.ToString()
                           };
         }
     }

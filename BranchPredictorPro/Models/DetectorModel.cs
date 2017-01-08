@@ -22,9 +22,9 @@ namespace BranchPredictorPro.Models
 
         public InitModel InitModel { get; private set; }
 
-        public int TableEntries { get; set; } 
+        public int TableEntries { get; set; }
 
-        private int GlobalHistoryEntries { get; set; } 
+        public int GlobalHistoryEntries { get; set; } 
 
         public int LocalHistoryEntries { get; set; } 
 

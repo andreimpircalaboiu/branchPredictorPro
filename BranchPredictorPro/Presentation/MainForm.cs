@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using BranchPredictorPro.App;
 using BranchPredictorPro.Constants;
 using BranchPredictorPro.Helpers;
 using BranchPredictorPro.Import;
@@ -17,8 +18,8 @@ namespace BranchPredictorPro.Presentation
         {
             InitializeComponent();
             InitModel = new InitModel();
-            GlobalHistoryUpDown.Value = 8;
-            LocalHistoryUpDown.Value = 8;
+            GlobalHistoryUpDown.Value = 0;
+            LocalHistoryUpDown.Value = 0;
             PathUpDown.Value = 0;
             UnbiasedUpDown.Value = 0.95M;
             EnableDisableGlobalHistory.Checked = true;
@@ -180,9 +181,7 @@ namespace BranchPredictorPro.Presentation
             {
                 MessageBox.Show("Please select at least one type of prediction!");
             }
-           
-
-
+            var detectionEngine = new DetectionEngine(InitModel,this);
         }
     }
 }

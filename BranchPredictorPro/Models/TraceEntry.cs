@@ -55,7 +55,7 @@ namespace BranchPredictorPro.Models
             }
         }
 
-        public int CurrentAddressInt => Convert.ToInt32(CurrentAddress);
-        public int DestinationAddressInt => Convert.ToInt32(DestinationAddress);
+        public long CurrentAddressLong => Convert.ToInt64(CurrentAddress);
+        public long DestinationAddressLong => Convert.ToInt64(DestinationAddress);
     }
 }

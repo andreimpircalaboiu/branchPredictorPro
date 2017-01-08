@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BranchPredictorPro.Application.Interfaces;
+using BranchPredictorPro.App.Interfaces;
 using BranchPredictorPro.Models;
 
-namespace BranchPredictorPro.Application.Detectors
+namespace BranchPredictorPro.App.Detectors
 {
     public class GlobalLocalDetector : IDetector
     {

@@ -14,17 +14,17 @@ namespace BranchPredictorPro.Models
         public int LocalHistoryBits { get; set; }
         public int PathBits { get; set; }
         public double UnbiasedPolarization { get; set; }
-        public string UnbiasedContext { get; }
+        public string UnbiasedContext { get; set; }
 
         public string Print() {
 
-            return "Trace:                 " + TraceName + "\n" +
-                   "Type:                  " + TypeName + "\n" +
-                   "Hrl:                   " + LocalHistoryBits + "\n" +
-                   "Hrg:                   " + GlobalHistoryBits + "\n" +
-                   "Path:                  " + PathBits + "\n" +
-                   "Unbiased Polarization: " + UnbiasedPolarization + "\n" +
-                   "Unbiased Context:      " + UnbiasedContext + "\n";
+            return "Trace:                 " + TraceName + Environment.NewLine +
+                   "Type:                  " + TypeName + Environment.NewLine +
+                   "Hrl:                   " + LocalHistoryBits + Environment.NewLine +
+                   "Hrg:                   " + GlobalHistoryBits + Environment.NewLine +
+                   "Path:                  " + PathBits + Environment.NewLine +
+                   "Unbiased Polarization: " + UnbiasedPolarization + Environment.NewLine +
+                   "Unbiased Context:      " + UnbiasedContext + Environment.NewLine;
 
         }
     }
