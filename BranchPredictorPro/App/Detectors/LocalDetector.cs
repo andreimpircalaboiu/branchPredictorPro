@@ -5,11 +5,11 @@ using BranchPredictorPro.Models;
 
 namespace BranchPredictorPro.App.Detectors
 {
-    public class GlobalDetector : GenericDetector, IDetector
+    public class LocalDetetor : GenericDetector, IDetector
     {
         public void InitTable()
         {
-            Table = new GlobalHistoryTable(DetectorModel);
+            Table = new LocalHistoryTable(DetectorModel);
         }
 
         public ResultModel RunDetector(InitModel initModel)

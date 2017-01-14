@@ -20,11 +20,10 @@ namespace BranchPredictorPro.Models
 
             return "Trace:                 " + TraceName + Environment.NewLine +
                    "Type:                  " + TypeName + Environment.NewLine +
-                   "Hrl:                   " + LocalHistoryBits + Environment.NewLine +
-                   "Hrg:                   " + GlobalHistoryBits + Environment.NewLine +
-                   "Path:                  " + PathBits + Environment.NewLine +
-                   "Unbiased Polarization: " + UnbiasedPolarization + Environment.NewLine +
-                   "Unbiased Context:      " + UnbiasedContext + Environment.NewLine;
+                   "Hrl bits:              " + LocalHistoryBits + Environment.NewLine +
+                   "Hrg bits:              " + GlobalHistoryBits + Environment.NewLine +
+                   "Path bits:             " + PathBits + Environment.NewLine +
+                   "Unbiased Contexts:     " + UnbiasedContext + Environment.NewLine;
 
         }
     }

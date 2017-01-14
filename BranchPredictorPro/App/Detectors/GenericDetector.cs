@@ -21,5 +21,13 @@ namespace BranchPredictorPro.App.Detectors
                               TypeName = initModel.DetectionType.ToString()
                           };
         }
+
+        protected void AddRowsToTable(InitModel initModel)
+        {
+            foreach (var entry in initModel.TraceEntries)
+            {
+                Table.AddRow(entry);
+            }
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace BranchPredictorPro.Presentation
             GlobalHistoryUpDown.Value = 0;
             LocalHistoryUpDown.Value = 0;
             PathUpDown.Value = 0;
-            UnbiasedUpDown.Value = 0.95M;
+            UnbiasedUpDown.Value = 1;
             EnableDisableGlobalHistory.Checked = true;
             InitBindings();
         }
@@ -157,6 +157,7 @@ namespace BranchPredictorPro.Presentation
             if (InitModel.TraceEntries.Count==0)
             {
                 TraceValidationMessage.Text = "Import Traces!";
+                return;
             }
 
 
@@ -165,21 +166,25 @@ namespace BranchPredictorPro.Presentation
                 if (LocalHistoryUpDown.Enabled && LocalHistoryUpDown.Value == 0)
                 {
                     HrlValidationMessage.Text = "Local History must be bigger then 0!";
+                    return;
                 }
 
                 if (GlobalHistoryUpDown.Enabled && GlobalHistoryUpDown.Value == 0)
                 {
                     HrGValidationMessage.Text = "Global History must be bigger then 0!";
+                    return;
                 }
 
                 if (PathUpDown.Enabled && PathUpDown.Value == 0)
                 {
                     PathValidationMessage.Text = "Path must be bigger then 0!";
+                    return;
                 }
             }
             else
             {
                 MessageBox.Show("Please select at least one type of prediction!");
+                return;
             }
             var detectionEngine = new DetectionEngine(InitModel,this);
         }

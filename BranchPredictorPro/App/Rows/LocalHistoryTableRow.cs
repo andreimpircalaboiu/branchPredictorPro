@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BranchPredictorPro.App.Rows
 {
-    public class GlobalHistoryTableRow
+    public class LocalHistoryTableRow
     {
-        public long Address { get;set; }
+        public long Address { get; set; }
 
         public long Destination { get; set; }
 
@@ -14,11 +18,13 @@ namespace BranchPredictorPro.App.Rows
 
         public int NumberOfTimesNotReached { get; set; }
 
-        public long Hrg { get; set; }
+        public long Hrl { get; set; }
 
         public int LeastRecentlyUsed { get; set; }
 
-        public GlobalHistoryTableRow()
+        public int LocalHistoryBits { get; set; }
+
+        public LocalHistoryTableRow()
         {
             LeastRecentlyUsed = 0;
         }
@@ -28,13 +34,15 @@ namespace BranchPredictorPro.App.Rows
             if (happens)
             {
                 NumberOfTimesReached++;
+                Hrl = Hrl * 2 + 1;
             }
             else
             {
                 NumberOfTimesNotReached++;
+                Hrl = Hrl * 2;
             }
+            Hrl = Hrl % (long) Math.Pow(2, LocalHistoryBits);
         }
     }
-
 }
 

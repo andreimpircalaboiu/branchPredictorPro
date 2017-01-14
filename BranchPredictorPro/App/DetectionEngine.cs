@@ -9,17 +9,15 @@ namespace BranchPredictorPro.App
     public class DetectionEngine
     {
         private readonly MainForm _form;
-        private Thread _engineThread;
-        private bool _done;
         private readonly IDetectorFactory _detectorFactory;
         public ResultModel Result { get; set; }
 
         public DetectionEngine(InitModel initModel, MainForm form)
         {
             _form = form;
-            _engineThread = new Thread(() => StartDetection(initModel));
+            var engineThread = new Thread(() => StartDetection(initModel));
             _detectorFactory = new DetectorFactory();
-            _engineThread.Start();
+            engineThread.Start();
         }
 
         private void StartDetection(InitModel initModel)

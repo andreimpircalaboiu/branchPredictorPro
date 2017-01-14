@@ -140,6 +140,7 @@
             this.label8.Size = new System.Drawing.Size(111, 13);
             this.label8.TabIndex = 13;
             this.label8.Text = "Unbiased polarization:";
+            this.label8.Visible = false;
             // 
             // label9
             // 
@@ -240,6 +241,7 @@
             this.UnbiasedUpDown.Name = "UnbiasedUpDown";
             this.UnbiasedUpDown.Size = new System.Drawing.Size(192, 20);
             this.UnbiasedUpDown.TabIndex = 28;
+            this.UnbiasedUpDown.Visible = false;
             this.UnbiasedUpDown.ValueChanged += new System.EventHandler(this.UnbiasedUpDown_ValueChanged);
             // 
             // DetectionTypeLabel

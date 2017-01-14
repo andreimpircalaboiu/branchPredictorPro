@@ -50,13 +50,17 @@
     <Compile Include="App\DetectionEngine.cs" />
     <Compile Include="App\DetectorFactory.cs" />
     <Compile Include="App\Detectors\GenericDetector.cs" />
+    <Compile Include="App\Detectors\LocalDetector.cs" />
     <Compile Include="App\Detectors\GlobalDetector.cs" />
     <Compile Include="App\Detectors\GlobalLocalDetector.cs" />
     <Compile Include="App\Interfaces\IDetector.cs" />
     <Compile Include="App\Interfaces\IDetectorFactory.cs" />
     <Compile Include="App\Interfaces\ITable.cs" />
     <Compile Include="App\Rows\GlobalHistoryTableRow.cs" />
+    <Compile Include="App\Rows\LocalHistoryTableRow.cs" />
+    <Compile Include="App\Tables\GenericHistoryTable.cs" />
     <Compile Include="App\Tables\GlobalHistoryTable.cs" />
+    <Compile Include="App\Tables\LocalHistoryTable.cs" />
     <Compile Include="Constants\ArchitectureType.cs" />
     <Compile Include="Constants\BrType.cs" />
     <Compile Include="Helpers\FormHelper.cs" />

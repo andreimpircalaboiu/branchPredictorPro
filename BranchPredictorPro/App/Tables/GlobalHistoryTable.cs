@@ -32,6 +32,7 @@ namespace BranchPredictorPro.App.Tables
             _numberOfBranches++;
         }
 
+
         public double GetUnbiasedRatio()
         {
             double sum = 0;
@@ -41,9 +42,18 @@ namespace BranchPredictorPro.App.Tables
                 if (max <= 0.95)
                     sum = sum + row.NumberOfTimesReached + row.NumberOfTimesNotReached;
             }
-            return sum * 1.0 / _numberOfBranches * 100.0 * Math.Pow(10.0, _detectorModel.InitModel.UnbiasesPolarization) / Math.Pow(10.0, _detectorModel.InitModel.UnbiasesPolarization);
+            return sum*1.0/_numberOfBranches;
 
         }
+
+        private void IncrementAge()
+        {
+            foreach (var row in _rows)
+            {
+                row.LeastRecentlyUsed++;
+            }
+        }
+
         public static long SetNewHistory(long hrg, int globalHistoryBits, bool happens)
         {
             var binaryHrg = Convert.ToString(hrg, 2);
@@ -53,14 +63,6 @@ namespace BranchPredictorPro.App.Tables
                 binaryHrg = binaryHrg.Substring(1);
             }
             return Convert.ToInt64(binaryHrg,2);
-        }
-
-        private void IncrementAge()
-        {
-            foreach (var row in _rows)
-            {
-                row.LeastRecentlyUsed++;
-            }
         }
 
         private void RemoveLeastRecentlyUsedRow()
@@ -104,6 +106,7 @@ namespace BranchPredictorPro.App.Tables
             programCounter = programCounter + _tableHrg;
             return programCounter;
         }
+
 
     }
 }
